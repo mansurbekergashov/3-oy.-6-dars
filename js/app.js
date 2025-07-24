@@ -93,7 +93,7 @@ console.log(getTotalSalary(employees));
 
 
 
-// 6.  O'rtacha tezlokni hisoblash
+// 6.  O'rtacha tezlikni hisoblash
 
 const carr = {
     model: "Cobalt",
@@ -189,7 +189,52 @@ calculateBirthYear(person);
 
 
 
-// 11 va 12 freeze ekan 
+
+// 11 Muzlatilgan obyektda o'zgartirish qilish
+
+const userx = Object.freeze({
+    name: "Ulug'bek",
+    age: 20
+});
+
+function updateUser(userx) {
+    userx.hobby = "football"
+    if (Object.isFrozen) {
+        console.log("Object is frozen");
+    } else {
+        console.log("Not frozen");
+    }
+}
+
+
+
+
+
+
+
+
+
+
+// 12.    Obyekt muzlatilganligini tekshirish
+
+const user0 = {
+    name: "Ulug'bek",
+    age: 20
+}
+
+function updateUser(user0) {
+    Object.freeze(user0)
+    if (Object.isFrozen(user0)) {
+        console.log("Frozen");
+
+    } else {
+        console.log("Not frozen");
+
+    }
+}
+
+updateUser(user0);
+
 
 
 
@@ -268,7 +313,7 @@ child.age = 10;
 
 
 function isOwnKey(obj, key) {
-    if (obj.hasOwnProperty(key)){
+    if (obj.hasOwnProperty(key)) {
         return true
     } else {
         return false
