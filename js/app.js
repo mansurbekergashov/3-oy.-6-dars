@@ -211,10 +211,6 @@ function updateUser(userx) {
 
 
 
-
-
-
-
 // 12.    Obyekt muzlatilganligini tekshirish
 
 const user0 = {
